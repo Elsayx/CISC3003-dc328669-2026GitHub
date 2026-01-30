@@ -1,0 +1,276 @@
+/* =========================================
+   Variables
+========================================= */
+:root{
+  --c-header:#1A237E;
+  --c-nav:#3F51B5;
+  --c-page:#F8FAF6;
+  --c-bar:#7986CB;
+  --c-caption:#C5CAE9;
+  --c-time:#FF80AB;
+
+  --link:#00B0FF;
+  --hover:#F50057;
+
+  --border:#d7dbea;
+  --text:#1f2430;
+  --muted:#5b6475;
+}
+
+/* =========================================
+   Base + Typography
+========================================= */
+*{ box-sizing:border-box; }
+
+body{
+  background: var(--c-page);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 4em;  /* 改：整体左右边距 */
+}
+
+h1, h2, h3, nav{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+}
+
+a{
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:hover, a:focus-visible{
+  background: var(--hover);
+  color:#fff;
+  text-decoration:none;
+  outline:none;
+}
+
+/* =========================================
+   Header
+========================================= */
+header{
+  color:#fff;
+  background: var(--c-header);
+  padding: 0.5em 1.5em 0 1.5em;
+  margin: 0em 1.5em 0.25em 1.5em;  /* 改：只保留下边距 */
+}
+
+header h1{
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 0 0 0.3me 0;
+  margin: 0;
+}
+
+header h1 img{
+  vertical-align: middle;
+  margin-right: 0.6em;
+}
+
+header > p{
+  font-style: italic;
+  font-size: 1.1rem;
+  padding: 0 0 0.8em 0;
+  margin: 0;
+}
+
+header nav{
+  background: var(--c-nav);
+  padding: 0.65em 0;
+  margin: 0 -1.5em;
+  padding-left: 1.5em;
+  text-align: left;
+}
+
+header nav ul{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li{
+  display:inline-block;
+  margin-right: 1em;
+}
+
+header nav a{
+  display:inline-block;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25em;
+}
+
+/* =========================================
+   Main
+========================================= */
+main{
+  padding: 0 1.5em;
+  margin: 0em 0em 1.5em 0em;  /* 改：去掉左右 margin */
+}
+
+/* =========================================
+   Card Sections
+========================================= */
+main section{
+  background:#fff;
+  border: 1px solid var(--border);
+  border-top: none;  /* 改：去掉上边框，避免 h3 上方露白 */
+  margin: 1.2em 0;
+}
+
+main section:first-of-type{
+  border-top: 1px solid var(--border);  /* 改：第一个 section 保留上边框 */
+}
+
+main section > h3{
+  background: var(--c-bar);
+  color:#fff;
+  padding: 0.6em 0.9em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;  /* 改：确保没有外边距 */
+  font-style: normal; 
+}
+
+/* =========================================
+   Description Section
+========================================= */
+#descriptions p{
+  font-size: 0.95rem;     /* 想更小就 0.9rem / 0.85rem */
+  color: #000;            /* 黑色 */
+  padding: 0.6em 0.9em 0 0.9em;  /* 你原来的 padding 可保留 */
+}
+
+#descriptions figure{
+  margin: 0;
+  padding: 0.5me 0 0 0;              /* 关键：左右空白主要来自这里 */
+}
+
+#descriptions figure a{
+  background: transparent;
+}
+
+#descriptions img[title="Central Park"]{
+  display:block;
+  width:100%;
+  height:auto;
+  border: 1px solid var(--border);
+}
+
+#descriptions figcaption{
+  background: var(--c-caption);
+  padding: 0.55em 0.75em;
+  font-style: italic;
+  color:#394357;
+  
+}
+
+/* =========================================
+   Options Row
+========================================= */
+main > p{
+  background:#fff;
+  border: 1px solid var(--border);
+  padding: 0.6me 0.9em;
+  margin: 1.2em 0;
+  color: var(--muted);
+}
+
+main > p img{
+  vertical-align: middle;
+  margin-left: 0.35em;
+}
+
+/* =========================================
+   Related Photos Section
+========================================= */
+/* 标题一行，图片在下一行横排 */
+/* Related Photos：标题一行，图片下一行横排，右侧保留空白 */
+#related-photos{
+  padding: 0;
+}
+
+/* 标题正常占一行 */
+#related-photos > h3{
+  margin: 0;
+}
+
+/* 让 a 们作为一行的 flex 项 */
+#related-photos{
+  /* 关键：把图片这一行放进“可控宽度”的区域 */
+}
+
+#related-photos > a{
+  display: block;
+  float: left;              /* 关键：让三个 a 横排（不靠百分比） */
+  width: 8rem;              /* 每张图固定宽度：你想大/小就改这里 */
+  margin: 0;                /* 不留白 */
+}
+
+#related-photos > a img{
+  display: block;
+  width: 100%;
+  height: 8rem;             /* 固定高度 */
+  object-fit: cover;
+  border: 0;
+}
+
+/* 清除浮动，避免影响下面内容 */
+#related-photos::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* =========================================
+   Reviews Section
+========================================= */
+#reviews div{
+  padding: 0.75em 0.9em 0.25em 0.9em;
+}
+
+#reviews div p:first-child{
+  font-style: italic;
+  color: var(--c-nav);
+}
+
+#reviews div p:first-child img{
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+#reviews time{
+  color: var(--c-time);
+}
+
+#reviews div p:last-child{
+  color: var(--text);
+  margin: 0.3em 0 0.5em 0;
+}
+
+#reviews hr{
+  border:0;
+  border-top: 1px dotted var(--border);
+  margin: 0 0.9em;
+}
+
+#reviews > p{
+  padding: 0.75em 0.9em 0.9em 0.9em;
+  text-align: center;
+}
+
+/* =========================================
+   Footer
+========================================= */
+footer{
+  color:#fff;
+  background: var(--c-header);
+  padding: 1em 1em;
+  margin: 0em 1.5em 0.25em 1.5em; 
+  font-style: normal;  /* 改：去掉左右 margin */
+}
+
+footer p{
+  margin: 0.15em 0;
+  font-size: 0.70rem;
+}
