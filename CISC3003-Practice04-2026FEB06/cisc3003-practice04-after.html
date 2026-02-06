@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CISC3003 Practice 04 - After</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/cisc3003-practice04.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Share Your Travels</h1>
+    <p>let us know where you've been</p>
+  </header>
+
+  <main>
+    <div>
+      <form action="process.php" method="post">
+        <fieldset>
+          <legend>Photo Details</legend>
+
+          <table class="form-table">
+            <colgroup>
+              <col class="col-left" />
+              <col class="col-right" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <label class="label-block" for="title">Title</label>
+                  <input id="title" type="text" name="title" placeholder="Give your photo a descriptive name" />
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2">
+                  <label class="label-block" for="description">Description</label>
+                  <textarea id="description" name="description" rows="5" cols="61" placeholder="Adding a rich description will help with search results"></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="cell-pad">
+                  <label class="label-block" for="continent">Continent</label>
+                  <select id="continent" name="continent">
+                    <option value="">Choose continent</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="north-america">North America</option>
+                    <option value="south-america">South America</option>
+                  </select>
+
+                  <label class="label-block" for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="">Choose country</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="united-states">United States</option>
+                  </select>
+
+                  <label class="label-block" for="city">City</label>
+                  <select id="city" name="city">
+                    <option value="" label=" "> </option>
+                    <option value="calgary">Calgary</option>
+                    <option value="montreal">Montreal</option>
+                    <option value="toronto">Toronto</option>
+                    <option value="vancouver">Vancouver</option>
+                  </select>
+                </td>
+
+                <td class="cell-pad">
+                  <div class="panel">
+                    <div class="panel-title">Copyright?</div>
+                    <label class="choice">
+                      <input type="radio" name="copyright" value="all-rights-reserved" checked="checked" />
+                      All rights reserved
+                    </label>
+                    <label class="choice">
+                      <input type="radio" name="copyright" value="creative-commons" />
+                      Creative Commons
+                    </label>
+                  </div>
+
+                  <div class="panel panel-spacer">
+                    <div class="panel-title">Creative Commons Types</div>
+                    <label class="choice">
+                      <input type="checkbox" name="cc[]" value="1" />
+                      Attribution
+                    </label>
+                    <label class="choice">
+                      <input type="checkbox" name="cc[]" value="2" />
+                      Noncommercial
+                    </label>
+                    <label class="choice">
+                      <input type="checkbox" name="cc[]" value="3" />
+                      No Derivative Works
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" class="license-row">
+                  <label class="license-label">
+                    I accept the software license
+                    <input type="checkbox" name="license" value="accepted" />
+                  </label>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="cell-pad">
+                  <label class="label-inline" for="rate">Rate this photo:</label>
+                  <input id="rate" type="number" min="1" max="5" name="rate" />
+
+                  <div class="spacer"></div>
+
+                  <label class="label-inline" for="color">Color Collection:</label>
+                  <input id="color" type="color" name="color" />
+                </td>
+
+                <td class="cell-pad">
+                  <div class="panel">
+                    <label class="label-block" for="date">Date Taken:</label>
+                    <input id="date" type="date" name="date" />
+
+                    <label class="label-block" for="time">Time Taken:</label>
+                    <input id="time" type="time" name="time" />
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" class="button-row">
+                  <input type="submit" value="Submit" class="rounded" />
+                  <input type="reset" value="Clear Form" class="rounded" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
