@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexus RePaper｜e-Commerce Demo (1-page)</title>
+  <meta name="description" content="A 1-page e-Commerce demo site featuring categories, products, offers, testimonials, brands, and a 4-column footer. CISC3003 SugEx04.">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx04-demo.css">
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Nexus RePaper home">Nexus RePaper</a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#featured">Feature Products</a>
+        <a class="nav-link" href="#latest">Latest Products</a>
+        <a class="nav-link" href="#offer">Offer</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#brands">Top Brands</a>
+        <a class="nav-link" href="#footer">Footer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Banner header">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="kicker">CISC3003 SugEx04 · 1-page e-Commerce Demo</p>
+          <h1>Modern, clean product showcase for customers & partners.</h1>
+          <p class="lead">
+            This demo presents a simple storefront layout: categories, featured products, latest arrivals,
+            an exclusive offer, testimonials, top brands, and a professional footer.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#featured">Explore featured</a>
+            <a class="btn ghost" href="#offer">See the offer</a>
+          </div>
+
+          <ul class="highlights" aria-label="Key highlights">
+            <li><strong>Responsive</strong> navigation (dropdown on mobile)</li>
+            <li><strong>Product cards</strong> with price and ratings</li>
+            <li><strong>Clean layout</strong> with reusable sections</li>
+          </ul>
+        </div>
+
+        <!-- Replace images with SugEx04 assets if provided -->
+        <img class="hero-photo" src="./image.jpg" alt="Store banner image">
+      </div>
+    </section>
+
+    <section id="categories" class="section" aria-label="Feature Categories">
+      <div class="container">
+        <div class="section-head">
+          <h2>Feature Categories</h2>
+          <p class="muted">Quick entry points for browsing.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card media-card">
+            <img src="./image2.png" alt="Category: Essentials">
+            <div class="card-body">
+              <h3>Essentials</h3>
+              <p class="muted">Daily items with a minimal, premium look.</p>
+            </div>
+          </article>
+
+          <article class="card media-card">
+            <img src="./image3.png" alt="Category: Accessories">
+            <div class="card-body">
+              <h3>Accessories</h3>
+              <p class="muted">Small add-ons that elevate your setup.</p>
+            </div>
+          </article>
+
+          <article class="card media-card">
+            <img src="./image4.png" alt="Category: Lifestyle">
+            <div class="card-body">
+              <h3>Lifestyle</h3>
+              <p class="muted">Aesthetic and functional picks.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section" aria-label="Feature Products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Feature Products</h2>
+          <p class="muted">Handpicked favorites with strong reviews.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="product card">
+            <img src="./image5.png" alt="Feature product 01">
+            <div class="card-body">
+              <h3 class="product-title">PaperPro Notebook</h3>
+              <p class="price">$29.90</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.5 out of 5</span> <span class="muted">(4.5)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image2.png" alt="Feature product 02">
+            <div class="card-body">
+              <h3 class="product-title">Eco Desk Mat</h3>
+              <p class="price">$39.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.0 out of 5</span> <span class="muted">(4.0)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image3.png" alt="Feature product 03">
+            <div class="card-body">
+              <h3 class="product-title">Minimal Tote</h3>
+              <p class="price">$24.50</p>
+              <p class="rating"><span aria-hidden="true">★★★★★</span> <span class="sr-only">Rating: 5.0 out of 5</span> <span class="muted">(5.0)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image4.png" alt="Feature product 04">
+            <div class="card-body">
+              <h3 class="product-title">Refill Pen Set</h3>
+              <p class="price">$18.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.2 out of 5</span> <span class="muted">(4.2)</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest" class="section" aria-label="Latest Products">
+      <div class="container">
+        <div class="section-head">
+          <h2>Latest Products</h2>
+          <p class="muted">New arrivals to keep the store fresh.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="product card">
+            <img src="./image2.png" alt="Latest product 01">
+            <div class="card-body">
+              <h3 class="product-title">Softcover Journal</h3>
+              <p class="price">$16.90</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.0 out of 5</span> <span class="muted">(4.0)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image3.png" alt="Latest product 02">
+            <div class="card-body">
+              <h3 class="product-title">Cable Organizer</h3>
+              <p class="price">$12.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.3 out of 5</span> <span class="muted">(4.3)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image4.png" alt="Latest product 03">
+            <div class="card-body">
+              <h3 class="product-title">Daily Planner</h3>
+              <p class="price">$22.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★★</span> <span class="sr-only">Rating: 4.7 out of 5</span> <span class="muted">(4.7)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image5.png" alt="Latest product 04">
+            <div class="card-body">
+              <h3 class="product-title">Sage Sticker Pack</h3>
+              <p class="price">$7.50</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.1 out of 5</span> <span class="muted">(4.1)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image3.png" alt="Latest product 05">
+            <div class="card-body">
+              <h3 class="product-title">Desk Tray</h3>
+              <p class="price">$15.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.4 out of 5</span> <span class="muted">(4.4)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image4.png" alt="Latest product 06">
+            <div class="card-body">
+              <h3 class="product-title">Acrylic Stand</h3>
+              <p class="price">$19.90</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.2 out of 5</span> <span class="muted">(4.2)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image5.png" alt="Latest product 07">
+            <div class="card-body">
+              <h3 class="product-title">Premium Refill</h3>
+              <p class="price">$9.90</p>
+              <p class="rating"><span aria-hidden="true">★★★★★</span> <span class="sr-only">Rating: 4.8 out of 5</span> <span class="muted">(4.8)</span></p>
+            </div>
+          </article>
+
+          <article class="product card">
+            <img src="./image2.png" alt="Latest product 08">
+            <div class="card-body">
+              <h3 class="product-title">Pocket Notes</h3>
+              <p class="price">$11.00</p>
+              <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.0 out of 5</span> <span class="muted">(4.0)</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer" class="section offer" aria-label="Product Offer">
+      <div class="container offer-inner">
+        <img class="offer-photo" src="./image4.png" alt="Exclusive offer product">
+        <div class="offer-text">
+          <p class="kicker">Exclusive offer</p>
+          <h2>Member-only bundle: Starter Kit</h2>
+          <p class="lead">
+            A curated bundle for new customers: notebook, refill pen, and daily planner.
+            Limited quantity, while supplies last.
+          </p>
+          <p class="price-big">$59.00 <span class="muted">/ bundle</span></p>
+          <a class="btn primary" href="#footer">Buy now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-head">
+          <h2>Testimonials</h2>
+          <p class="muted">What customers say about the products.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <figure class="card quote">
+            <blockquote>
+              “Clean design, great quality. The planner layout is super practical and the paper feels premium.”
+            </blockquote>
+            <figcaption class="quote-meta">
+              <img class="avatar" src="./image2.png" alt="Customer photo: Ava">
+              <div>
+                <p class="name">Ava</p>
+                <p class="rating"><span aria-hidden="true">★★★★★</span> <span class="sr-only">Rating: 5.0 out of 5</span></p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="card quote">
+            <blockquote>
+              “Fast shipping and the accessories match my workspace perfectly. Love the minimal style.”
+            </blockquote>
+            <figcaption class="quote-meta">
+              <img class="avatar" src="./image3.png" alt="Customer photo: Leo">
+              <div>
+                <p class="name">Leo</p>
+                <p class="rating"><span aria-hidden="true">★★★★☆</span> <span class="sr-only">Rating: 4.5 out of 5</span></p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="card quote">
+            <blockquote>
+              “The bundle offer is great value. Everything feels cohesive and thoughtfully designed.”
+            </blockquote>
+            <figcaption class="quote-meta">
+              <img class="avatar" src="./image5.png" alt="Customer photo: Mia">
+              <div>
+                <p class="name">Mia</p>
+                <p class="rating"><span aria-hidden="true">★★★★★</span> <span class="sr-only">Rating: 5.0 out of 5</span></p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands" class="section" aria-label="Top Brands">
+      <div class="container">
+        <div class="section-head">
+          <h2>Top Brands</h2>
+          <p class="muted">Trusted by teams and creators.</p>
+        </div>
+
+        <ul class="brands" aria-label="Brand list">
+          <li class="brand-pill">PaperWorks</li>
+          <li class="brand-pill">EcoLab</li>
+          <li class="brand-pill">SageStudio</li>
+          <li class="brand-pill">MinimalCo</li>
+          <li class="brand-pill">UrbanDesk</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container footer-grid">
+      <section class="footer-col" aria-label="Download our app">
+        <h2 class="footer-title">Download Our App</h2>
+        <p class="muted">Get the app for Android and iOS mobile phone.</p>
+        <div class="badges" role="group" aria-label="App download badges">
+          <span class="badge">Google Play</span>
+          <span class="badge">App Store</span>
+        </div>
+      </section>
+
+      <section class="footer-col" aria-label="Our logo">
+        <h2 class="footer-title">Our Logo</h2>
+        <p class="logo-text">Nexus RePaper</p>
+        <p class="muted">A demo storefront layout for CISC3003 SugEx04 (2026).</p>
+      </section>
+
+      <section class="footer-col" aria-label="Useful links">
+        <h2 class="footer-title">Useful Links</h2>
+        <ul class="footer-links">
+          <li><a href="#featured">Coupons</a></li>
+          <li><a href="#latest">Blog Post</a></li>
+          <li><a href="#offer">Return Policy</a></li>
+          <li><a href="#footer">Join Affiliate</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col" aria-label="Follow us">
+        <h2 class="footer-title">Follow Us</h2>
+        <ul class="footer-links">
+          <li><a href="#footer">Facebook</a></li>
+          <li><a href="#footer">Twitter</a></li>
+          <li><a href="#footer">Instagram</a></li>
+          <li><a href="#footer">Youtube</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-bottom">
+      <a class="back-to-top" href="#top">Back to top</a>
+      <p class="muted">CISC3003 Web Programming - 2026: dc328669 + 杨旭 Danny</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-btn');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+
+      function setOpen(open) {
+        nav.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+
+      btn.addEventListener('click', function () {
+        setOpen(!nav.classList.contains('is-open'));
+      });
+
+      nav.addEventListener('click', function (e) {
+        var target = e.target;
+        if (target && target.tagName === 'A') setOpen(false);
+      });
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+  </script>
+</body>
+</html>
+
