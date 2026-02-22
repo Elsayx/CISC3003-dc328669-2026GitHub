@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDSTORE | e-Commerce Demo - Home</title>
+  <meta name="description" content="REDSTORE e-Commerce demo site for CISC3003 Suggested Exercise 05. A modern online store featuring categories, products, offers, testimonials, and top brands.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx05-demo.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container">
+      <a href="cisc3003-SugEx05-demo.html" class="logo">
+        <h1>REDSTORE<span>athlete's choice</span></h1>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="cisc3003-SugEx05-demo.html" class="active">Home</a>
+        <a href="allProducts.html">Products</a>
+        <a href="#categories">About</a>
+        <a href="#testimonials">Contact</a>
+        <a href="#footer">Account</a>
+        <a href="#" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="hero" id="home">
+    <div class="container row">
+      <div class="col-2">
+        <h4>Trade-in-offer</h4>
+        <h1>Give Your Workout<br>A New Style!</h1>
+        <p>
+          Success isn't always about greatness. It's about consistency.
+          Consistent hard work gains success. Greatness will come.
+        </p>
+        <a href="allProducts.html" class="hero-btn">Explore Now &#8594;</a>
+      </div>
+      <div class="col-2">
+        <img src="../images/image.jpg" alt="Hero banner - athletes showcasing fitness gear">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE CATEGORIES ===== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Feature Categories</h2>
+        <p>Explore our curated collections for every lifestyle.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <a href="allProducts.html">
+            <img src="../images/image2.png" alt="Category: Sportswear">
+            <div class="cat-overlay">
+              <p>Sportswear</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="allProducts.html">
+            <img src="../images/image3.png" alt="Category: Footwear">
+            <div class="cat-overlay">
+              <p>Footwear</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="allProducts.html">
+            <img src="../images/image4.png" alt="Category: Accessories">
+            <div class="cat-overlay">
+              <p>Accessories</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE PRODUCTS ===== -->
+  <section class="products-section" id="featured">
+    <div class="small-container">
+      <div class="section-title">
+        <h2>Feature Products</h2>
+        <p>Handpicked items with the best reviews from our customers.</p>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image2.png" alt="Red Printed T-Shirt">
+            <div class="product-info">
+              <h4>Red Printed T-Shirt</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD50.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image3.png" alt="Black Sports Sneakers">
+            <div class="product-info">
+              <h4>Black Sports Sneakers</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="price">USD85.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image4.png" alt="Blue Denim Jacket">
+            <div class="product-info">
+              <h4>Blue Denim Jacket</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="price">USD120.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image5.png" alt="Classic White Polo">
+            <div class="product-info">
+              <h4>Classic White Polo</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD45.00</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LATEST PRODUCTS ===== -->
+  <section class="products-section" id="latest">
+    <div class="small-container">
+      <div class="section-title">
+        <h2>Latest Products</h2>
+        <p>New arrivals to keep your wardrobe fresh and up-to-date.</p>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image5.png" alt="Performance Track Pants">
+            <div class="product-info">
+              <h4>Performance Track Pants</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD65.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image4.png" alt="Running Shoes Pro">
+            <div class="product-info">
+              <h4>Running Shoes Pro</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="price">USD95.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image3.png" alt="Gym Training Vest">
+            <div class="product-info">
+              <h4>Gym Training Vest</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="price">USD38.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image2.png" alt="Casual Hoodie">
+            <div class="product-info">
+              <h4>Casual Hoodie</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD72.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image3.png" alt="Compression Shorts">
+            <div class="product-info">
+              <h4>Compression Shorts</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="price">USD28.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image5.png" alt="Sports Backpack">
+            <div class="product-info">
+              <h4>Sports Backpack</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD55.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image4.png" alt="Workout Gloves">
+            <div class="product-info">
+              <h4>Workout Gloves</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="price">USD22.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image2.png" alt="Yoga Mat Premium">
+            <div class="product-info">
+              <h4>Yoga Mat Premium</h4>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="price">USD42.00</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT OFFER ===== -->
+  <section class="offer" id="offer">
+    <div class="container row">
+      <div class="col-2">
+        <img src="../images/image5.png" alt="Exclusive offer product">
+      </div>
+      <div class="col-2">
+        <p>Exclusively Available on REDSTORE</p>
+        <h2>Smart Band 4</h2>
+        <p>
+          The Smart Band 4 features a 0.95-inch AMOLED color display with
+          adjustable brightness. Track your workouts, monitor your heart rate,
+          and stay connected with smart notifications. Water-resistant up to 50 meters.
+        </p>
+        <p class="price-big">USD59.99</p>
+        <a href="#" class="hero-btn">Buy Now &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="small-container">
+      <div class="section-title">
+        <h2>Testimonials</h2>
+        <p>What our customers are saying about REDSTORE.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <img src="../images/image2.png" alt="Customer photo: Sarah">
+          <blockquote>
+            "Amazing quality! The T-shirt fabric is soft and breathable.
+            Perfect for my daily workouts. Will definitely order again."
+          </blockquote>
+          <p class="name">Sarah Johnson</p>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../images/image4.png" alt="Customer photo: Marcus">
+          <blockquote>
+            "Fast shipping and great customer service. The sneakers fit
+            perfectly and the quality exceeded my expectations."
+          </blockquote>
+          <p class="name">Marcus Lee</p>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="../images/image3.png" alt="Customer photo: Emily">
+          <blockquote>
+            "Love the variety of products available. The prices are very
+            competitive and the return policy gives me confidence to shop."
+          </blockquote>
+          <p class="name">Emily Chen</p>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOP BRANDS ===== -->
+  <section class="brands" id="brands">
+    <div class="container">
+      <div class="section-title">
+        <h2>Top Brands</h2>
+        <p>Trusted brands that choose REDSTORE as their partner.</p>
+      </div>
+
+      <ul class="brands-list">
+        <li>NIKE</li>
+        <li>ADIDAS</li>
+        <li>PUMA</li>
+        <li>UNDER ARMOUR</li>
+        <li>REEBOK</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Download Our App</h3>
+          <p>Download App for Android and iOS mobile phone.</p>
+          <div class="app-badges">
+            <a href="#" class="app-badge">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </a>
+            <a href="#" class="app-badge">
+              <i class="fa-brands fa-apple"></i> App Store
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="logo-footer">
+            <h2>REDSTORE<span>athlete's choice</span></h2>
+          </div>
+          <p>
+            Our purpose is to sustainably make the pleasure and benefits
+            of sports accessible to the many.
+          </p>
+        </div>
+
+        <div>
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Blog Post</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Join Affiliate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &ndash; CISC3003 Suggested Exercise 05 by Student ID + Full Name</p>
+        <p>CISC3003 Web Programming &ndash; 2026: dc328669 + Yang Xu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE MENU SCRIPT ===== -->
+  <script>
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('navLinks');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', function () {
+        nav.classList.toggle('active');
+        var expanded = nav.classList.contains('active');
+        btn.setAttribute('aria-expanded', String(expanded));
+        btn.innerHTML = expanded
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

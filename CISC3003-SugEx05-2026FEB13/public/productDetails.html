@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDSTORE | Red Printed T-Shirt by HRX</title>
+  <meta name="description" content="Red Printed T-Shirt by HRX - USD50.00. Premium quality workout wear available at REDSTORE.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx05-demo.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container">
+      <a href="cisc3003-SugEx05-demo.html" class="logo">
+        <h1>REDSTORE<span>athlete's choice</span></h1>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="cisc3003-SugEx05-demo.html">Home</a>
+        <a href="allProducts.html" class="active">Products</a>
+        <a href="cisc3003-SugEx05-demo.html#categories">About</a>
+        <a href="cisc3003-SugEx05-demo.html#testimonials">Contact</a>
+        <a href="cisc3003-SugEx05-demo.html#footer">Account</a>
+        <a href="#" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PRODUCT DETAILS ===== -->
+  <section class="product-details">
+    <div class="small-container">
+      <div class="row">
+
+        <!-- Product Image Column -->
+        <div class="col-2">
+          <img src="../images/image2.png" alt="Red Printed T-Shirt by HRX" class="product-main-img" id="mainImg">
+
+          <div class="product-thumbnails">
+            <img src="../images/image2.png" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
+            <img src="../images/image3.png" alt="Thumbnail 2" onclick="changeImage(this)">
+            <img src="../images/image4.png" alt="Thumbnail 3" onclick="changeImage(this)">
+            <img src="../images/image5.png" alt="Thumbnail 4" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <!-- Product Info Column -->
+        <div class="col-2">
+          <div class="product-info-detail">
+            <p class="breadcrumb">Home / T-Shirt</p>
+            <h3>Red Printed T-Shirt by HRX</h3>
+            <p class="price">USD50.00</p>
+
+            <select id="sizeSelect" aria-label="Select size">
+              <option value="">Select Size</option>
+              <option value="S">Small (S)</option>
+              <option value="M">Medium (M)</option>
+              <option value="L">Large (L)</option>
+              <option value="XL">Extra Large (XL)</option>
+              <option value="XXL">XXL</option>
+            </select>
+
+            <div class="quantity-row">
+              <input type="number" value="1" min="1" max="99" aria-label="Quantity">
+              <button class="btn-cart">Add To Cart</button>
+            </div>
+
+            <div class="product-description">
+              <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
+              <p>
+                Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt.
+                Team it with a pair of shorts for your morning workout or a pair of
+                denims for an evening out with the guys. This premium quality T-shirt
+                features a relaxed fit with a ribbed crew neck and short sleeves.
+                The lightweight breathable fabric ensures maximum comfort during
+                intense workout sessions or casual outings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RELATED PRODUCTS ===== -->
+  <section class="related-products">
+    <div class="small-container">
+      <div class="related-header">
+        <h3>Related Products</h3>
+        <a href="allProducts.html">View More</a>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image3.png" alt="Sports Watch Elite">
+            <div class="product-info">
+              <h3>Sports Watch Elite</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD89.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image4.png" alt="Running Shoes Pro">
+            <div class="product-info">
+              <h3>Running Shoes Pro</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="price">USD95.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image5.png" alt="Gym Training Vest">
+            <div class="product-info">
+              <h3>Gym Training Vest</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="price">USD38.00</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="productDetails.html">
+            <img src="../images/image2.png" alt="Casual Hoodie">
+            <div class="product-info">
+              <h3>Casual Hoodie</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="price">USD72.00</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Download Our App</h3>
+          <p>Download App for Android and iOS mobile phone.</p>
+          <div class="app-badges">
+            <a href="#" class="app-badge">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </a>
+            <a href="#" class="app-badge">
+              <i class="fa-brands fa-apple"></i> App Store
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="logo-footer">
+            <h2>REDSTORE<span>athlete's choice</span></h2>
+          </div>
+          <p>
+            Our purpose is to sustainably make the pleasure and benefits
+            of sports accessible to the many.
+          </p>
+        </div>
+
+        <div>
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Blog Post</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Join Affiliate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &ndash; CISC3003 Suggested Exercise 05 by Student ID + Full Name</p>
+        <p>CISC3003 Web Programming &ndash; 2026: dc328669 + Yang Xu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Thumbnail image switcher
+    function changeImage(thumb) {
+      var mainImg = document.getElementById('mainImg');
+      mainImg.src = thumb.src;
+
+      var thumbs = document.querySelectorAll('.product-thumbnails img');
+      for (var i = 0; i < thumbs.length; i++) {
+        thumbs[i].classList.remove('active');
+      }
+      thumb.classList.add('active');
+    }
+
+    // Mobile menu
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('navLinks');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', function () {
+        nav.classList.toggle('active');
+        var expanded = nav.classList.contains('active');
+        btn.setAttribute('aria-expanded', String(expanded));
+        btn.innerHTML = expanded
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
