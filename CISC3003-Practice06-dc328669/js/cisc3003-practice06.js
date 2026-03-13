@@ -16,12 +16,10 @@
   }
 
   function outputCartSummary() {
-    var taxRate = 0.1;
-    var shippingThreshold = 1000;
     var subtotal = calculateSubtotal(cartQuantities, cartPrices);
-    var tax = calculateTax(subtotal, taxRate);
-    var shipping = calculateShipping(subtotal, shippingThreshold);
-    var grandTotal = calculateGrandTotal(subtotal, tax, shipping);
+    var tax = calculateTax(subtotal);
+    var shipping = calculateShipping(subtotal);
+    var grandTotal = subtotal + tax + shipping;
 
     outputSummaryRow("Subtotal", subtotal, false);
     outputSummaryRow("Tax", tax, false);

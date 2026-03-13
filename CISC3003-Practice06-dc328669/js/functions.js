@@ -2,10 +2,6 @@ function calculateTotal(quantity, price) {
   return quantity * price;
 }
 
-function outputCurrency(num) {
-  return "$" + num.toFixed(2);
-}
-
 function outputCartRow(file, title, quantity, price, total) {
   document.write('<tr class="cart-row">');
   document.write(
@@ -17,8 +13,8 @@ function outputCartRow(file, title, quantity, price, total) {
   );
   document.write('<td class="product-title-cell">' + title + "</td>");
   document.write('<td class="quantity-cell">' + quantity + "</td>");
-  document.write('<td class="price-cell">' + outputCurrency(price) + "</td>");
-  document.write('<td class="amount-cell">' + outputCurrency(total) + "</td>");
+  document.write('<td class="price-cell">$' + price.toFixed(2) + "</td>");
+  document.write('<td class="amount-cell">$' + total.toFixed(2) + "</td>");
   document.write("</tr>");
 }
 
@@ -33,20 +29,16 @@ function calculateSubtotal(quantities, prices) {
   return subtotal;
 }
 
-function calculateTax(subtotal, rate) {
-  return subtotal * rate;
+function calculateTax(subtotal) {
+  return subtotal * 0.1;
 }
 
-function calculateShipping(subtotal, threshold) {
-  if (subtotal > threshold) {
+function calculateShipping(subtotal) {
+  if (subtotal > 1000) {
     return 0;
   }
 
   return 40;
-}
-
-function calculateGrandTotal(subtotal, tax, shipping) {
-  return subtotal + tax + shipping;
 }
 
 function outputSummaryRow(label, amount, isGrandTotal) {
@@ -58,6 +50,6 @@ function outputSummaryRow(label, amount, isGrandTotal) {
 
   document.write('<tr class="' + rowClass + '">');
   document.write('<td colspan="4" class="summary-label">' + label + "</td>");
-  document.write('<td class="summary-value">' + outputCurrency(amount) + "</td>");
+  document.write('<td class="summary-value">$' + amount.toFixed(2) + "</td>");
   document.write("</tr>");
 }

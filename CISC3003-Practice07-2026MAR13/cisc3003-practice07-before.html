@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CISC3003 Practice 07</title>
+</head>
+<body>
+  <main class="page">
+    <form id="artworkForm" method="post" action="#">
+      <h1>Edit Art Work Details</h1>
+
+      <div class="form-body">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" class="hilightable required">
+
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" class="hilightable required">
+
+        <div class="row">
+          <div class="col">
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre" class="hilightable">
+              <option value="">Choose genre</option>
+              <option value="abstract">Abstract</option>
+              <option value="landscape">Landscape</option>
+              <option value="portrait">Portrait</option>
+              <option value="still-life">Still Life</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" class="hilightable">
+              <option value="">Choose subject</option>
+              <option value="people">People</option>
+              <option value="nature">Nature</option>
+              <option value="animals">Animals</option>
+              <option value="objects">Objects</option>
+            </select>
+
+            <label for="medium">Medium</label>
+            <input type="text" id="medium" name="medium" class="hilightable">
+
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" class="hilightable required year-input">
+
+            <label for="museum">Museum</label>
+            <input type="text" id="museum" name="museum" class="hilightable">
+          </div>
+
+          <div class="col">
+            <fieldset>
+              <legend>Type</legend>
+              <label><input type="radio" name="type" value="painting" checked> Painting</label>
+              <label><input type="radio" name="type" value="sculpture"> Sculpture</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Image Creative Commons Specification</legend>
+              <label><input type="checkbox" name="cc" value="attribution"> Attribution</label>
+              <label><input type="checkbox" name="cc" value="noncommercial"> Noncommercial</label>
+              <label><input type="checkbox" name="cc" value="no-derivative"> No Derivative Works</label>
+              <label><input type="checkbox" name="cc" value="share-alike"> Share Alike</label>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="reset" class="btn btn-reset">Clear Form</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/cisc3003-practice07.js"></script>
+</body>
+</html>
