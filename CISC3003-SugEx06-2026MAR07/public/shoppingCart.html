@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDSTORE | Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx06-demo.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="cisc3003-SugEx06-demo.html" class="logo">
+        <span class="logo-name">REDSTORE<span>athlete's choice</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="cisc3003-SugEx06-demo.html">Home</a>
+        <a href="allProducts.html">Products</a>
+        <a href="cisc3003-SugEx06-demo.html#categories">About</a>
+        <a href="cisc3003-SugEx06-demo.html#testimonials">Contact</a>
+        <a href="loginSignup.html">Account</a>
+        <a href="shoppingCart.html" class="cart-icon active"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SHOPPING CART ===== -->
+  <div class="cart-page">
+    <div class="small-container">
+      <div class="cart-info">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td data-label="Product">
+              <div class="cart-item-desc">
+                <img src="../images/prod1.jpg" alt="Cart Item 1">
+                <div>
+                  <p>Red Printed T-Shirt</p>
+                  <small>Price: $50.00</small>
+                  <br>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td data-label="Quantity"><input type="number" value="1" min="1"></td>
+            <td data-label="Subtotal">$50.00</td>
+          </tr>
+          <tr>
+            <td data-label="Product">
+              <div class="cart-item-desc">
+                <img src="../images/prod2.jpg" alt="Cart Item 2">
+                <div>
+                  <p>Black Sports Sneakers</p>
+                  <small>Price: $85.00</small>
+                  <br>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td data-label="Quantity"><input type="number" value="1" min="1"></td>
+            <td data-label="Subtotal">$85.00</td>
+          </tr>
+          <tr>
+            <td data-label="Product">
+              <div class="cart-item-desc">
+                <img src="../images/prod3.jpg" alt="Cart Item 3">
+                <div>
+                  <p>Blue Denim Jacket</p>
+                  <small>Price: $120.00</small>
+                  <br>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td data-label="Quantity"><input type="number" value="1" min="1"></td>
+            <td data-label="Subtotal">$120.00</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>$255.00</td>
+          </tr>
+          <tr>
+            <td>Tax</td>
+            <td>$20.00</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$275.00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Download Our App</h3><p>Download App for Android and iOS mobile phone.</p></div>
+        <div><div class="logo-footer"><p class="logo-footer-name">REDSTORE<span>athlete's choice</span></p></div><p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p></div>
+        <div><h3>Useful Links</h3><ul><li><a href="#">Coupons</a></li><li><a href="#">Blog Post</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Join Affiliate</a></li></ul></div>
+        <div><h3>Follow Us</h3><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Youtube</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &ndash; CISC3003 Suggested Exercise 06</p>
+        <p>CISC3003 Web Programming &ndash; 2026: dc328669 + Yang Xu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var btn = document.getElementById('menuBtn');
+    var nav = document.getElementById('navLinks');
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

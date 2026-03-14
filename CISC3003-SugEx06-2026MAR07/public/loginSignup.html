@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDSTORE | Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx06-demo.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="cisc3003-SugEx06-demo.html" class="logo">
+        <span class="logo-name">REDSTORE<span>athlete's choice</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="cisc3003-SugEx06-demo.html">Home</a>
+        <a href="allProducts.html">Products</a>
+        <a href="cisc3003-SugEx06-demo.html#categories">About</a>
+        <a href="cisc3003-SugEx06-demo.html#testimonials">Contact</a>
+        <a href="loginSignup.html" class="active">Account</a>
+        <a href="shoppingCart.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== ACCOUNT PAGE ===== -->
+  <div class="account-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <img src="../images/hero.jpg" alt="Account Visual" style="border-radius:12px; width:100%; max-width:500px;">
+        </div>
+        <div class="col-2">
+          <div class="form-container">
+            <div class="form-btn">
+              <span id="loginTab" onclick="login()" class="active">Login</span>
+              <span id="regTab" onclick="register()">Register</span>
+            </div>
+            
+            <form id="LoginForm">
+              <input type="text" placeholder="Username" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit" class="btn">Login</button>
+              <a href="#">Forgot password?</a>
+            </form>
+
+            <form id="RegForm">
+              <input type="text" placeholder="Username" required>
+              <input type="email" placeholder="Email" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit" class="btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Download Our App</h3><p>Download App for Android and iOS mobile phone.</p></div>
+        <div><div class="logo-footer"><p class="logo-footer-name">REDSTORE<span>athlete's choice</span></p></div><p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p></div>
+        <div><h3>Useful Links</h3><ul><li><a href="#">Coupons</a></li><li><a href="#">Blog Post</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Join Affiliate</a></li></ul></div>
+        <div><h3>Follow Us</h3><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Youtube</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &ndash; CISC3003 Suggested Exercise 06</p>
+        <p>CISC3003 Web Programming &ndash; 2026: dc328669 + Yang Xu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var btn = document.getElementById('menuBtn');
+    var nav = document.getElementById('navLinks');
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
+
+    // Toggle Login/Signup
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var loginTab = document.getElementById("loginTab");
+    var regTab = document.getElementById("regTab");
+
+    function register() {
+      RegForm.style.transform = "translateX(-100%)";
+      LoginForm.style.transform = "translateX(-100%)";
+      loginTab.classList.remove('active');
+      regTab.classList.add('active');
+    }
+
+    function login() {
+      RegForm.style.transform = "translateX(0px)";
+      LoginForm.style.transform = "translateX(0px)";
+      regTab.classList.remove('active');
+      loginTab.classList.add('active');
+    }
+  </script>
+</body>
+</html>

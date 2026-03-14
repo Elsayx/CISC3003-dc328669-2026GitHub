@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDSTORE | Product Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cisc3003-SugEx06-demo.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="cisc3003-SugEx06-demo.html" class="logo">
+        <span class="logo-name">REDSTORE<span>athlete's choice</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="cisc3003-SugEx06-demo.html">Home</a>
+        <a href="allProducts.html" class="active">Products</a>
+        <a href="cisc3003-SugEx06-demo.html#categories">About</a>
+        <a href="cisc3003-SugEx06-demo.html#testimonials">Contact</a>
+        <a href="loginSignup.html">Account</a>
+        <a href="shoppingCart.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PRODUCT DETAILS ===== -->
+  <div class="product-details">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2">
+          <img src="../images/prod1.jpg" id="ProductImg" class="product-main-img" alt="Red Printed T-Shirt">
+          <div class="product-thumbnails">
+            <img src="../images/prod1.jpg" class="small-img active" alt="Thumb 1">
+            <img src="../images/prod2.jpg" class="small-img" alt="Thumb 2">
+            <img src="../images/prod3.jpg" class="small-img" alt="Thumb 3">
+            <img src="../images/prod4.jpg" class="small-img" alt="Thumb 4">
+          </div>
+        </div>
+        <div class="col-2 product-info-detail">
+          <p class="breadcrumb">Home / T-Shirt</p>
+          <h3>Red Printed T-Shirt by HRX</h3>
+          <p class="price">USD50.00</p>
+          <select>
+            <option>Select Size</option>
+            <option>XXL</option>
+            <option>XL</option>
+            <option>Large</option>
+            <option>Medium</option>
+            <option>Small</option>
+          </select>
+          <div class="quantity-row">
+            <input type="number" value="1" min="1">
+            <a href="shoppingCart.html" class="btn-cart">Add To Cart</a>
+          </div>
+          <div class="product-description">
+            <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
+            <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Download Our App</h3><p>Download App for Android and iOS mobile phone.</p></div>
+        <div><div class="logo-footer"><p class="logo-footer-name">REDSTORE<span>athlete's choice</span></p></div><p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p></div>
+        <div><h3>Useful Links</h3><ul><li><a href="#">Coupons</a></li><li><a href="#">Blog Post</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Join Affiliate</a></li></ul></div>
+        <div><h3>Follow Us</h3><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Youtube</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &ndash; CISC3003 Suggested Exercise 06</p>
+        <p>CISC3003 Web Programming &ndash; 2026: dc328669 + Yang Xu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var btn = document.getElementById('menuBtn');
+    var nav = document.getElementById('navLinks');
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    });
+
+    // Image Gallery Script
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+    
+    for (let i = 0; i < SmallImg.length; i++) {
+        SmallImg[i].onclick = function() {
+            ProductImg.src = SmallImg[i].src;
+            // Remove active class from all
+            for (let j = 0; j < SmallImg.length; j++) {
+                SmallImg[j].classList.remove('active');
+            }
+            // Add active class to clicked
+            SmallImg[i].classList.add('active');
+        }
+    }
+  </script>
+</body>
+</html>
