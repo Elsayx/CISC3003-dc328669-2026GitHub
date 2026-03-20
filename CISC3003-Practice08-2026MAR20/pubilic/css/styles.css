@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+/* general text formatting */
+
+h1, h2, h3, legend {
+ font-family: 'Merriweather', serif;    }
+body {
+   font-family: 'Open Sans', Arial, sans-serif;
+   font-size: 16px;
+}
+
+table {  
+   width: 90%;
+   margin: 0 auto;
+}
+table tbody td{
+   vertical-align: top;
+}
+legend {
+   background-color: #616161 ;
+    color: white;
+   margin: 0 auto;
+   width: 90%;
+   padding: 0.25em;
+   text-align: center;
+   font-weight: bold;
+   font-size: 24px;
+}
+fieldset {
+   margin: 1em auto;
+   background-color: #F5F5F5;
+   width: 70%;
+}
+form p {
+   margin-top: 0.5em;
+}
+form input[type="text"], form select {
+    font-size: 16px;
+    height: 24px;
+    padding: 3px;
+}
+form select {
+    height: 30px;
+}
+#title, #description { width: 100% }
+#medium, #museum { width: 90% }
+#year { width: 40%; }
+
+
+.box {
+   border: 1pt solid #9E9E9E;
+   padding: 0.5em;
+   margin-bottom: 0.4em;
+}
+
+.rectangle {
+   background-color: #BDBDBD;
+   padding: 0.5em;
+    margin-bottom: 5px;
+}
+.centered {
+   text-align: center;
+}
+.highlight {
+    background-color: #FFE0B2;
+}    
+.error {
+    background: #FFCDD2 url(error.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #FF5252;
+    border-color: #FF1744;    
+}
+
+
+
+.btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  height: 32px;
+  color: black;
+  font-size: 14px;
+  background: #FF9100;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #FFAB40;
+  text-decoration: none;
+}
+
+main {
+    margin: 30px 30px;
+    font-family: "Open Sans",Arial, sans-serif;
+    font-size: 10pt;
+}
+
+header {
+    background-color: #F5F5F5;
+    margin: 5px 30px;
+}
+h1 {
+    font-family: 'Merriweather', "Times New Roman", serif;
+    font-size: 36px;
+    padding: 5px;
+    color: #5D4037;
+}
+
+#imgManipulated {
+    margin: 0;
+    float: left;
+}
+
+.sliders { width: 250px; }
+
+#sliderBox label {
+    display: block;
+    width: 250px;
+    float: left;
+}
+
+#sliderBox {
+    margin: 0;
+    border: solid 1px #ccc;
+    padding: 10px;
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+    background-color: white;
+}
+
+button {
+    background-color: #EF6C00;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+}
+
+figcaption {
+    background-color: white;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+#thumbBox {
+    float: left;
+    border: solid 1px #ccc;
+    padding: 15px;
+    margin-left: 10px;
+    background-color: white;
+}
+#thumbBox div {
+     margin-top: 5px;
+     margin-bottom: 15px;
+}
+
+.tiled {
+    background-image:url(../images/stripes.jpg);
+    background-repeat:repeat;
+}
+
+
