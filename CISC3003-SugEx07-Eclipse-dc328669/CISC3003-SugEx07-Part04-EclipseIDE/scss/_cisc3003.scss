@@ -1,0 +1,55 @@
+.stage-preview {
+  background-color: #f3f4f6;
+}
+
+.stage-preview__card {
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stage-preview__tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: #edf2ff;
+  color: $darkBlue;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.student-info {
+  background-color: #f8f8f8;
+  border-top: 1px solid #e6e6e6;
+}
+
+.student-info__text {
+  text-align: center;
+  color: $darkBlue;
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+}
+
+.footer__student {
+  margin-top: 2rem;
+  padding: 0 1.5rem 2rem;
+  text-align: center;
+  color: $white;
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  strong {
+    color: $white;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../CISC3003-SugEx07-Part07-EclipseIDE/images/favicon-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="../../CISC3003-SugEx07-Part07-EclipseIDE/css/style.css">
+    <title>CISC3003 SugEx07 All In One | Easybank</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .overview {
+        background: linear-gradient(180deg, #fafafa 0%, #f3f4f6 100%);
+      }
+
+      .overview__card {
+        max-width: 52rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .overview__tag {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.45rem 1rem;
+        border-radius: 999px;
+        background-color: #ecfdf3;
+        color: #31d35c;
+        font-size: 0.8125rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .part-nav {
+        background-color: #ffffff;
+        border-top: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+      }
+
+      .part-nav__grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .part-nav__grid a {
+        display: block;
+        padding: 0.9rem 0.75rem;
+        border-radius: 0.75rem;
+        background-color: #f8f9fb;
+        color: #2d314d;
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: 400;
+        transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+      }
+
+      .part-nav__grid a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(45, 49, 77, 0.1);
+      }
+
+      .part-section {
+        border-top: 1px solid #eceff3;
+      }
+
+      .part-section--light {
+        background-color: #fafafa;
+      }
+
+      .part-section__head {
+        max-width: 44rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .part-section__label {
+        display: inline-block;
+        margin-bottom: 0.75rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        background-color: #edf2ff;
+        color: #2d314d;
+        font-size: 0.8125rem;
+      }
+
+      .mini-demo {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .mini-card {
+        padding: 1.5rem;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 12px 30px rgba(45, 49, 77, 0.08);
+      }
+
+      .mini-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .mini-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .mini-links span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 5.5rem;
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        background-color: #f4f5f7;
+        color: #2d314d;
+      }
+
+      .hamburger-demo {
+        width: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hamburger-demo span {
+        display: block;
+        height: 3px;
+        margin: 6px 0;
+        border-radius: 99px;
+        background: #2d314d;
+      }
+
+      .mobile-menu-demo {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background: linear-gradient(180deg, rgba(45, 49, 77, 0.06), rgba(45, 49, 77, 0.02));
+      }
+
+      .mobile-menu-demo a {
+        color: #2d314d;
+        font-size: 1rem;
+      }
+
+      .student-banner {
+        background-color: #2d314d;
+      }
+
+      .student-banner__text {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .student-banner__text h2,
+      .student-banner__text p {
+        color: #ffffff;
+      }
+
+      .student-banner__text p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 63.9375em) {
+        .part-nav__grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .mini-demo {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 39.9375em) {
+        .part-nav__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="overlay has-fade"></div>
+
+      <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+        <a href="#top" class="header__logo">
+          <img
+            src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/logo.svg"
+            alt="Easybank">
+        </a>
+
+        <a
+          id="btnHamburger"
+          href="#"
+          class="header__toggle hide-for-desktop"
+          aria-label="Open mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header__links hide-for-mobile">
+          <a href="#part01">Part 01</a><a href="#part02">Part 02</a
+          ><a href="#part03">Part 03</a><a href="#part04">Part 04</a
+          ><a href="#part05">Part 05</a><a href="#part06">Part 06</a
+          ><a href="#part07">Part 07</a>
+        </div>
+
+        <a href="#part07" class="button header__cta hide-for-mobile"
+          >Go To Footer</a
+        >
+      </nav>
+
+      <div class="header__menu has-fade">
+        <a href="#part01">Part 01</a>
+        <a href="#part02">Part 02</a>
+        <a href="#part03">Part 03</a>
+        <a href="#part04">Part 04</a>
+        <a href="#part05">Part 05</a>
+        <a href="#part06">Part 06</a>
+        <a href="#part07">Part 07</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="overview">
+        <div class="container container--pall">
+          <div class="overview__card">
+            <span class="overview__tag">All 7 Parts In One Page</span>
+            <h1>Easybank Suggested Exercise 07</h1>
+            <p>
+              This single page combines Part 01 to Part 07 in one scrollable
+              Eclipse page, so you can open one file and review the full
+              progression of the exercise.
+            </p>
+            <p>
+              Student identity: <strong>dc328669 + Yang Xu</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="part-nav">
+        <div class="container container--pall">
+          <div class="part-nav__grid">
+            <a href="#part01">Part 01<br>Navigation</a>
+            <a href="#part02">Part 02<br>Hamburger</a>
+            <a href="#part03">Part 03<br>Mobile Menu</a>
+            <a href="#part04">Part 04<br>Hero</a>
+            <a href="#part05">Part 05<br>Feature Grid</a>
+            <a href="#part06">Part 06<br>Articles Grid</a>
+            <a href="#part07">Part 07<br>Footer</a>
+          </div>
+        </div>
+      </div>
+
+      <section id="part01" class="part-section part-section--light">
+        <div class="container container--pall">
+          <div class="part-section__head">
+            <span class="part-section__label">Part 01</span>
+            <h2>Navigation Bar</h2>
+            <p>
+              This part focuses on the desktop Easybank navigation bar, the main
+              links, and the call-to-action button.
+            </p>
+          </div>
+
+          <div class="mini-demo">
+            <article class="mini-card">
+              <h3>Desktop Navigation Links</h3>
+              <div class="mini-links">
+                <span>Home</span>
+                <span>About</span>
+                <span>Contact</span>
+                <span>Blog</span>
+                <span>Careers</span>
+              </div>
+            </article>
+
+            <article class="mini-card">
+              <h3>Main Call To Action</h3>
+              <p>
+                The desktop header also includes the green Easybank
+                <em>Request Invite</em> button.
+              </p>
+              <a href="#part04" class="button">Request Invite</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="part02" class="part-section">
+        <div class="container container--pall">
+          <div class="part-section__head">
+            <span class="part-section__label">Part 02</span>
+            <h2>Animated Hamburger Menu</h2>
+            <p>
+              This part adds the hamburger icon for smaller screens. Resize the
+              browser to mobile width and click the top-right button to see the
+              animation.
+            </p>
+          </div>
+
+          <div class="mini-demo">
+            <article class="mini-card">
+              <h3>Hamburger Icon Preview</h3>
+              <div class="hamburger-demo" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>
+                The real interactive hamburger button is in the page header above.
+              </p>
+            </article>
+
+            <article class="mini-card">
+              <h3>What To Check</h3>
+              <p>
+                Confirm the icon appears on mobile width and changes when the
+                menu is toggled open and closed.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="part03" class="part-section part-section--light">
+        <div class="container container--pall">
+          <div class="part-section__head">
+            <span class="part-section__label">Part 03</span>
+            <h2>Animated Mobile Menu</h2>
+            <p>
+              This part adds the fade overlay and the mobile dropdown menu.
+              Resize the page to mobile width and click the top hamburger icon.
+            </p>
+          </div>
+
+          <div class="mini-demo">
+            <article class="mini-card">
+              <h3>Menu Items</h3>
+              <div class="mobile-menu-demo">
+                <a href="#part01">Home</a>
+                <a href="#part04">About</a>
+                <a href="#part05">Contact</a>
+                <a href="#part06">Blog</a>
+                <a href="#part07">Careers</a>
+              </div>
+            </article>
+
+            <article class="mini-card">
+              <h3>Expected Behaviour</h3>
+              <p>
+                The overlay should fade in, the menu should appear below the
+                header, and the page should stop scrolling while the menu is open.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="part04" class="part-section">
+        <div class="part-section__head container container--pt container--px">
+          <span class="part-section__label">Part 04</span>
+          <h2>Responsive Hero</h2>
+          <p>
+            This is the same Easybank hero section, brought into the combined
+            page so you can review it together with the other stages.
+          </p>
+        </div>
+
+        <section class="hero">
+          <div class="container">
+            <div class="hero__image"></div>
+
+            <div class="hero__text container--pall">
+              <h2>Next generation digital banking!!!!</h2>
+              <p>
+                Take your financial life online. Your Easybank account will be a
+                one-stop-shop for spending, saving, budgeting, investing, and
+                much more.
+              </p>
+              <a href="#part07" class="button hero__cta">Request Invite</a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="part05" class="part-section part-section--light">
+        <div class="part-section__head container container--pt container--px">
+          <span class="part-section__label">Part 05</span>
+          <h2>Responsive 4-Column Layout with Flexbox</h2>
+          <p>
+            This stage adds the feature section with four responsive columns.
+          </p>
+        </div>
+
+        <section class="feature">
+          <div class="feature__content container container--pall">
+            <div class="feature__intro">
+              <h2>Why choose Easybank?</h2>
+              <p>
+                We leverage Open Banking to turn your bank account into your
+                financial hub. Control your finances like never before.
+              </p>
+            </div>
+
+            <div class="feature__grid">
+              <div class="feature__item">
+                <div class="feature__icon">
+                  <img
+                    src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-online.svg"
+                    alt="Online Banking">
+                </div>
+                <div class="feature__title">Online Banking</div>
+                <div class="feature__description">
+                  Our modern web and mobile applications allow you to keep track
+                  of your finances wherever you are in the world.
+                </div>
+              </div>
+
+              <div class="feature__item">
+                <div class="feature__icon">
+                  <img
+                    src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-budgeting.svg"
+                    alt="Simple Budgeting">
+                </div>
+                <div class="feature__title">Simple Budgeting</div>
+                <div class="feature__description">
+                  See exactly where your money goes each month. Receive
+                  notifications when you are close to hitting your limits.
+                </div>
+              </div>
+
+              <div class="feature__item">
+                <div class="feature__icon">
+                  <img
+                    src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-onboarding.svg"
+                    alt="Fast Onboarding">
+                </div>
+                <div class="feature__title">Fast Onboarding</div>
+                <div class="feature__description">
+                  Open your account in minutes online and start taking control
+                  of your finances right away.
+                </div>
+              </div>
+
+              <div class="feature__item">
+                <div class="feature__icon">
+                  <img
+                    src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-api.svg"
+                    alt="Open API">
+                </div>
+                <div class="feature__title">Open API</div>
+                <div class="feature__description">
+                  Manage your savings, investments, pension, and much more from
+                  one account. Tracking your money has never been easier.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="part06" class="part-section">
+        <div class="part-section__head container container--pt container--px">
+          <span class="part-section__label">Part 06</span>
+          <h2>Responsive 4-Column Layout with CSS Grid</h2>
+          <p>
+            This stage adds the latest article cards using a responsive grid.
+          </p>
+        </div>
+
+        <section class="articles">
+          <div class="article__content container container--pall">
+            <h2>Latest Articles</h2>
+
+            <div class="article__grid">
+              <a href="#part06" class="article__item">
+                <div
+                  class="article__image"
+                  style="background-image: url('../../CISC3003-SugEx07-Part07-EclipseIDE/images/image-currency.jpg')"
+                ></div>
+                <div class="article__text">
+                  <div class="article__author">By Claire Robinson</div>
+                  <div class="article__title">
+                    Receive money in any currency with no fees
+                  </div>
+                  <div class="article__description">
+                    The world is getting smaller and we are becoming more mobile.
+                    So why should you be forced to only receive money in a
+                    single currency?
+                  </div>
+                </div>
+              </a>
+
+              <a href="#part06" class="article__item">
+                <div
+                  class="article__image"
+                  style="background-image: url('../../CISC3003-SugEx07-Part07-EclipseIDE/images/image-restaurant.jpg')"
+                ></div>
+                <div class="article__text">
+                  <div class="article__author">By Wilson Hutton</div>
+                  <div class="article__title">
+                    Treat yourself without worrying about money
+                  </div>
+                  <div class="article__description">
+                    Our simple budgeting feature allows you to separate out your
+                    spending and set realistic limits each month.
+                  </div>
+                </div>
+              </a>
+
+              <a href="#part06" class="article__item">
+                <div
+                  class="article__image"
+                  style="background-image: url('../../CISC3003-SugEx07-Part07-EclipseIDE/images/image-plane.jpg')"
+                ></div>
+                <div class="article__text">
+                  <div class="article__author">By Wilson Hutton</div>
+                  <div class="article__title">
+                    Take your Easybank card wherever you go
+                  </div>
+                  <div class="article__description">
+                    We want you to enjoy your travels. This is why we do not
+                    charge any fees on purchases while you are abroad.
+                  </div>
+                </div>
+              </a>
+
+              <a href="#part06" class="article__item">
+                <div
+                  class="article__image"
+                  style="background-image: url('../../CISC3003-SugEx07-Part07-EclipseIDE/images/image-confetti.jpg')"
+                ></div>
+                <div class="article__text">
+                  <div class="article__author">By Claire Robinson</div>
+                  <div class="article__title">
+                    Our invite-only Beta accounts are now live!
+                  </div>
+                  <div class="article__description">
+                    After a lot of hard work by the whole team, we are excited to
+                    launch our closed beta and welcome early users.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="part07" class="part-section part-section--light">
+        <div class="part-section__head container container--pt container--px">
+          <span class="part-section__label">Part 07</span>
+          <h2>Building a Footer with CSS Grid</h2>
+          <p>
+            The final stage completes the Easybank page and adds the required
+            student identity details for coursework submission.
+          </p>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <a class="footer__logo" href="#top">
+              <img
+                src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/logo-dark.svg"
+                alt="Easybank">
+            </a>
+
+            <div class="footer__social">
+              <a href="#part07"
+                ><img
+                  src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-facebook.svg"
+                  alt="Facebook"></a>
+              <a href="#part07"
+                ><img
+                  src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-youtube.svg"
+                  alt="YouTube"></a>
+              <a href="#part07"
+                ><img
+                  src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-twitter.svg"
+                  alt="Twitter"></a>
+              <a href="#part07"
+                ><img
+                  src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-pinterest.svg"
+                  alt="Pinterest"></a>
+              <a href="#part07"
+                ><img
+                  src="../../CISC3003-SugEx07-Part07-EclipseIDE/images/icon-instagram.svg"
+                  alt="Instagram"></a>
+            </div>
+
+            <div class="footer__links col1">
+              <a href="#part01">About Us</a>
+              <a href="#part05">Contact</a>
+              <a href="#part06">Blog</a>
+            </div>
+
+            <div class="footer__links col2">
+              <a href="#part07">Careers</a>
+              <a href="#part07">Support</a>
+              <a href="#part07">Privacy Policy</a>
+            </div>
+
+            <div class="footer__cta">
+              <a href="#top" class="button">Back To Top</a>
+            </div>
+
+            <div class="footer__copyright">
+              &copy; EasyBank. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <div class="student-banner">
+        <div class="container container--pall student-banner__text">
+          <h2>CISC3003 Web Programming - 2026</h2>
+          <p><strong>Student ID:</strong> dc328669</p>
+          <p><strong>Student Name:</strong> Yang Xu</p>
+          <p>This single page combines Suggested Exercise 07 Part 01 to Part 07.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../CISC3003-SugEx07-Part07-EclipseIDE/js/script.js"></script>
+  </body>
+</html>
