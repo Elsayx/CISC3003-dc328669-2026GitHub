@@ -1,0 +1,260 @@
+/* CISC3003 SugEx08 — mobile-first responsive layout */
+
+body {
+	margin: 0;
+	padding: 1em;
+	background-color: #ccccff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header,
+footer {
+	background-color: #0066ff;
+	padding: 1em 0.75em;
+	text-align: center;
+}
+
+h1 {
+	margin: 0 0 0.65em;
+	color: #000080;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+header nav a {
+	display: block;
+	box-sizing: border-box;
+	width: 80%;
+	max-width: 420px;
+	margin: 0.5em auto;
+	padding: 0.65em 1em;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 18px;
+	color: #0066ff;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+header nav a:hover,
+header nav a:focus {
+	text-decoration: underline;
+}
+
+main {
+	margin: 1.25em 0;
+}
+
+section {
+	margin-bottom: 1.5em;
+}
+
+h2 {
+	font-size: 1.15em;
+	font-weight: bold;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+
+.umich-box {
+	border: 1px solid #000000;
+	padding: 0.75em;
+	background-color: #ffffff;
+}
+
+.umich-box p {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 0.35em;
+	margin: 0;
+}
+
+.umich-box p strong {
+	flex: 0 0 auto;
+}
+
+.umich-box p span {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.umich-box a {
+	color: #0066ff;
+	text-decoration: underline;
+}
+
+.umich img {
+	display: none;
+	max-width: 100%;
+	height: auto;
+}
+
+footer p {
+	margin: 0;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.95em;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	line-height: 1.4;
+}
+
+	/* Large screen: sections side by side, images, h1 ::after text */
+	@media screen and (min-width: 900px) {
+	body {
+		background-color: #2C3E50;
+	}
+
+	header,
+	footer {
+		background-color: #5B2C6F;
+	}
+
+	h1 {
+		color: #ffffff;
+		font-size: 50px;
+	}
+
+	h2 {
+		color: #1A1A8C;
+	}
+
+	h1::after {
+		content: "(I guess...)";
+	}
+
+	main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 2%;
+	}
+
+	main section {
+		flex: 1 1 48%;
+		max-width: 49%;
+		margin-bottom: 0;
+		background-color: #F8F9FA;
+		border-radius: 10px;
+		padding: 1em;
+		box-sizing: border-box;
+	}
+
+	.umich {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-start;
+	}
+
+	.umich > h2 {
+		flex: 1 0 100%;
+	}
+
+	.umich > .umich-box {
+		flex: 1 0 100%;
+	}
+
+	.umich-box p {
+		display: block;
+		column-count: 3;
+		column-gap: 1.25em;
+	}
+
+	.umich-box p strong,
+	.umich-box p span {
+		display: inline;
+	}
+
+	.umich > img {
+		display: block;
+		flex: 0 0 48%;
+		max-width: 48%;
+		margin-top: 1em;
+		box-sizing: border-box;
+	}
+}
+
+/* Print: plain paper, small h1, simple links, no images or colored bands */
+@media print {
+	body {
+		background-color: #ffffff;
+		padding: 0;
+	}
+
+	header,
+	footer {
+		background-color: transparent;
+	}
+
+	h1 {
+		font-size: 1em;
+		color: #000000;
+		text-align: center;
+	}
+
+	h1::after {
+		content: none;
+	}
+
+	header nav a {
+		display: block;
+		width: auto;
+		max-width: none;
+		margin: 0.35em auto;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		color: #0000ff;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	main {
+		display: block;
+	}
+
+	main section {
+		max-width: none;
+		width: auto;
+	}
+
+	.umich-box {
+		background-color: #ffffff;
+	}
+
+	.umich-box p {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 0.35em;
+		column-count: unset;
+	}
+
+	.umich-box p strong {
+		flex: 0 0 auto;
+	}
+
+	.umich-box p span {
+		flex: 1 1 auto;
+	}
+
+	.umich img {
+		display: none !important;
+	}
+
+	footer p {
+		color: #000000;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		text-transform: none;
+		letter-spacing: normal;
+	}
+}
