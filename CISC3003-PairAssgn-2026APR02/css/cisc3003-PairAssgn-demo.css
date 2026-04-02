@@ -1,0 +1,314 @@
+/* ============================================================
+   CISC3003 Pair Assignment - Demo Project Pages Styles
+   DualCode Studio
+   ============================================================ */
+
+/* --- Demo Hero --- */
+.demo-hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: #fff;
+}
+
+.demo-hero h1 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.demo-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.demo-hero-bank {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+}
+
+.demo-hero-restaurant {
+  background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);
+}
+
+.demo-hero-travel {
+  background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+}
+
+/* --- Features Grid --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* --- Testimonials --- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
+}
+
+.testimonial-card cite {
+  font-weight: 600;
+  color: var(--color-text);
+  font-style: normal;
+}
+
+/* --- Pricing --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--color-primary);
+  position: relative;
+}
+
+.pricing-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.pricing-amount span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.pricing-features {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-features li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--color-text-muted);
+}
+
+.pricing-features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* --- Menu Section (Restaurant) --- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.menu-item h4 {
+  margin-bottom: 0.25rem;
+}
+
+.menu-item p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.menu-price {
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+/* --- Destinations (Travel) --- */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.destination-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  background: var(--color-bg);
+  transition: transform 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+}
+
+.destination-card h3 {
+  margin-bottom: 0.25rem;
+}
+
+.destination-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
