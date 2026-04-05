@@ -1,0 +1,86 @@
+CISC3003 Assessment Rubric for Suggested Exercise 09
+Student ID: dc328669
+Student Name: Yang xu
+
+=============================================================
+Part 1 Project Setup under Eclipse IDE (16 marks)
+=============================================================
+1. Screen shot for Eclipse Project Space for SugEx09          [5/5]
+   - Eclipse workspace: cisc3003-dc328669-2026
+   - Project space: CISC3003-SugEx09-dc328669
+   - Project folders: images, css, js, My Screen Shots
+2. Screen shot for Folder View of SugEx09 Eclipse Project     [3/3]
+   - Folder view of project in htdocs
+3. Screen shots (1) and (2) posted in Personal Forum          [4/4]
+   - Posted in personal forum under required topic names
+4. Screen shots (1) and (2) stored under "My Screen Shots"    [4/4]
+   - Stored in My Screen Shots folder
+
+Part 1 Score: 16/16
+
+=============================================================
+Part 2 Work Steps (12 marks)
+=============================================================
+1. Screen shot for cisc3003-SugEx09.php in editor mode        [2/2]
+   - PHP file opened in editor
+2. Screen shot for cisc3003-SugEx09.php in browser mode       [2/2]
+   - Before version displayed in browser
+3. Screen shot for cisc3003-SugEx09-after.php in editor mode  [2/2]
+   - Modified PHP file with arrays and generateOptions()
+4. Screen shot for cisc3003-SugEx09-after.php in browser mode [2/2]
+   - After version with genre/subject dropdowns populated
+5. Screen shot for art-process-after.php in editor mode       [2/2]
+   - art-process PHP file with $_POST superglobal usage
+6. Screen shot for art-process-after.php in browser mode      [2/2]
+   - Form data echoed correctly after submit
+
+Part 2 Score: 12/12
+
+=============================================================
+Part 3 Test Steps (8 marks)
+=============================================================
+1. Screen shot for test-run success                           [4/4]
+   - Form submission works, data displayed correctly
+2. Screen shot for validation success                         [4/4]
+   - W3C validation passed with no errors
+
+Part 3 Score: 8/8
+
+=============================================================
+Part 4 GitHub.com Steps (12 marks)
+=============================================================
+1. GitHub Repository Landing Page                             [2/2]
+2. GitHub SugEx09 Landing Page                                [2/2]
+3. GitHub SugEx09 PHP Landing Page                            [2/2]
+4. GitHub SugEx09 art-process-after.php Page                  [2/2]
+5. Local Repository View                                      [2/2]
+6. GitHub.com link for repository                             [2/2]
+
+Part 4 Score: 12/12
+
+=============================================================
+Part 5 Submission Steps (8 marks)
+=============================================================
+1. Screen shot for "My Screen Shots" folder                   [2/2]
+2. Screen shot for zipped project space                       [2/2]
+3. Source listing of cisc3003-SugEx09-after.php               [2/2]
+4. Source listing of art-process-after.php                    [2/2]
+5. Self-Assessment completed                                  [Yes]
+
+Part 5 Score: 8/8
+
+=============================================================
+SUMMARY
+=============================================================
+Part 1 Project Setup:    16/16
+Part 2 Work Steps:       12/12
+Part 3 Test Steps:        8/8
+Part 4 GitHub.com Steps: 12/12
+Part 5 Submission Steps:  8/8
+-------------------------------------------------------------
+Total Score:             56/56
+Degree of Achievement:   20/20
+Grand Total:             76/76
+Scale of 100:           100/100
+Classification:          Good
+=============================================================
