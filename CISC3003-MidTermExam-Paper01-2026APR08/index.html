@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MUST CHANGE: Replace with your actual Student ID and Full Name -->
+    <title>dc328669 Yang Xu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Sign Up Container -->
+        <div class="form-container sign-up-container">
+            <form id="signup-form">
+                <h1>Join Us</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Use your email to sign up</span>
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" id="signup-name" required />
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" id="signup-email" required />
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Create Password" id="signup-password" required />
+                </div>
+                <button type="submit">REGISTER</button>
+            </form>
+        </div>
+
+        <!-- Sign In Container -->
+        <div class="form-container sign-in-container">
+            <form id="signin-form">
+                <h1>Log In</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Use your account to sign in</span>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" id="signin-email" required />
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" id="signin-password" required />
+                </div>
+                <a href="#">Forgot Password?</a>
+                <button type="submit">SIGN IN</button>
+            </form>
+        </div>
+
+        <!-- Overlay Container -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello , Again!</h1>
+                    <img src="images/boy.png" alt="Boy image" class="avatar">
+                    <p>Log in to stay connected with us</p>
+                    <button class="ghost" id="signIn">SIGN IN</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome!</h1>
+                    <img src="images/girl.png" alt="Girl image" class="avatar">
+                    <p>Enter your details to start your journey</p>
+                    <button class="ghost" id="signUp">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Required by Exam -->
+    <footer>
+        <!-- MUST CHANGE: Replace with your actual Student ID and Full Name -->
+        <p>CISC3003 Web Programming: dc328669 Yang Xu 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
