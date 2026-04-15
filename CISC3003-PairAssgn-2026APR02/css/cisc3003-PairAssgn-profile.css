@@ -1,0 +1,204 @@
+/* ============================================================
+   CISC3003 Pair Assignment - Profile Page Styles
+   DualCode Studio
+   ============================================================ */
+
+/* --- Page Banner --- */
+.page-banner {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.page-banner h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.page-banner p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Values Grid --- */
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  border-left: 4px solid var(--color-primary);
+  transition: transform 0.2s;
+}
+
+.value-card:hover {
+  transform: translateX(4px);
+}
+
+.value-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+/* --- Career Aspirations --- */
+.aspirations-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.aspirations-content img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.aspirations-list li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.aspirations-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* --- Hobbies --- */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hobby-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Blog Posts --- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  padding: 1.25rem;
+}
+
+.blog-card-body .date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Contact Form --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.contact-info-list li strong {
+  color: var(--color-text);
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+  .page-banner {
+    padding: 4rem 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aspirations-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
