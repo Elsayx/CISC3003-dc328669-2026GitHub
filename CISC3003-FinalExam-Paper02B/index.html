@@ -3,24 +3,49 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scenario B - GitHub Pages Preview</title>
+    <title>Scenario B - Contact Form with PHPMailer</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 <main class="container">
     <section class="hero">
         <p class="eyebrow">Scenario B</p>
-        <h1>GitHub Pages Preview</h1>
-        <p>This public preview shows the submitted screenshots and project structure for Scenario B. The dynamic PHPMailer version runs in XAMPP through <code>index.php</code>.</p>
+        <h1>Contact Form, PHPMailer and PRG Pattern</h1>
+        <p>This page demonstrates client-side validation, PHPMailer configuration, mail debugging and Post/Redirect/Get.</p>
         <div class="actions">
-            <a href="My%20Screen%20Shots/B.01-contact-form-client-validation.png">B.01 Screenshot</a>
-            <a href="My%20Screen%20Shots/B.03-send-email-phpmailer.png">B.03 Screenshot</a>
-            <a href="My%20Screen%20Shots/B.05-post-redirect-get-pattern.png">B.05 Screenshot</a>
+            <a href="setup_database.php">Setup Database</a>
+            <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="php_file_list.php">PHP File List</a>
         </div>
     </section>
+
     <section class="card">
-        <h2>Scenario B Deliverables</h2>
-        <p>Contact form validation, PHPMailer configuration, Gmail sending proof, email debugging and post/redirect/get evidence are included in this project folder.</p>
+        <h2>B.01 Contact Form</h2>
+        <form id="contactForm" action="send.php" method="post" novalidate>
+            <div class="grid">
+                <label>
+                    Full name
+                    <input type="text" name="full_name" id="full_name" minlength="2" maxlength="120" required>
+                </label>
+                <label>
+                    Email address
+                    <input type="email" name="email" id="email" maxlength="160" required>
+                </label>
+            </div>
+            <label>
+                Subject
+                <input type="text" name="subject" id="subject" minlength="3" maxlength="160" required>
+            </label>
+            <label>
+                Message
+                <textarea name="message" id="message" rows="7" minlength="10" required></textarea>
+            </label>
+            <button type="submit">Send Email</button>
+            <p id="contactHint" class="hint" aria-live="polite"></p>
+        </form>
     </section>
 </main>
 <footer><p>CISC3003 Web Programming: Yang Xu + dc328669 + 2026</p></footer>
