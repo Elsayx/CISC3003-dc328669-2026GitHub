@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scenario C - Login and Registration System</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
 </head>
 <body>
 <main class="container">
@@ -48,6 +47,31 @@
 </main>
 <footer><p>CISC3003 Web Programming: Yang Xu + dc328669 + 2026</p></footer>
 <script>
+document.querySelectorAll('.tab-button').forEach((button) => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach((item) => item.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach((panel) => panel.classList.remove('active'));
+        button.classList.add('active');
+        document.querySelector(`#${button.dataset.target}`)?.classList.add('active');
+    });
+});
+
+document.querySelector('#signupEmail')?.addEventListener('blur', () => {
+    const emailStatus = document.querySelector('#emailStatus');
+    const email = document.querySelector('#signupEmail').value.trim();
+    if (!email) {
+        emailStatus.textContent = '';
+        return;
+    }
+    if (email.toLowerCase() === 'demo@example.com' || email.toLowerCase() === 'a239296652@gmail.com') {
+        emailStatus.className = 'hint error';
+        emailStatus.textContent = 'This email is already registered.';
+        return;
+    }
+    emailStatus.className = 'hint success';
+    emailStatus.textContent = 'This email is available.';
+});
+
 document.querySelector('#signupForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
     const form = event.currentTarget;
