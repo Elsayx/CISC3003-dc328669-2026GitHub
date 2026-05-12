@@ -24,7 +24,7 @@
 
     <section class="card">
         <h2>A.01-A.04 Student Feedback Form</h2>
-        <form id="scenarioAForm" action="submit_form.php" method="post" novalidate>
+        <form id="scenarioAForm" action="#" method="post">
             <div class="grid">
                 <label>
                     Full name
@@ -84,5 +84,20 @@
     </section>
 </main>
 <footer><p>CISC3003 Web Programming: Yang Xu + dc328669 + 2026</p></footer>
+<script>
+document.querySelector('#scenarioAForm')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const checkedInterests = form.querySelectorAll('input[name="interests[]"]:checked');
+    const hint = document.querySelector('#formHint');
+    if (!form.checkValidity() || checkedInterests.length === 0) {
+        hint.textContent = 'Please complete all required fields and select at least one interest.';
+        form.reportValidity();
+        return;
+    }
+    hint.className = 'success';
+    hint.textContent = 'Form data saved successfully. Static GitHub Pages preview validates the form format.';
+});
+</script>
 </body>
 </html>

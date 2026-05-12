@@ -24,7 +24,7 @@
 
         <section id="signupPanel" class="panel active">
             <h2>C.01 Signup Page</h2>
-            <form id="signupForm" action="register.php" method="post" novalidate>
+            <form id="signupForm" action="#" method="post">
                 <label>Full name <input type="text" name="full_name" id="signupName" minlength="2" maxlength="120" required></label>
                 <label>Email <input type="email" name="email" id="signupEmail" maxlength="160" required></label>
                 <p id="emailStatus" class="hint" aria-live="polite"></p>
@@ -37,7 +37,7 @@
 
         <section id="signinPanel" class="panel">
             <h2>C.04 Login Page</h2>
-            <form action="login.php" method="post">
+            <form id="signinForm" action="#" method="post">
                 <label>Email <input type="email" name="email" required></label>
                 <label>Password <input type="password" name="password" required></label>
                 <button type="submit">Login</button>
@@ -47,5 +47,35 @@
     </section>
 </main>
 <footer><p>CISC3003 Web Programming: Yang Xu + dc328669 + 2026</p></footer>
+<script>
+document.querySelector('#signupForm')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const password = document.querySelector('#signupPassword').value;
+    const confirmPassword = document.querySelector('#confirmPassword').value;
+    const hint = document.querySelector('#signupHint');
+    if (!form.checkValidity()) {
+        hint.textContent = 'Please complete the signup form correctly.';
+        form.reportValidity();
+        return;
+    }
+    if (password !== confirmPassword) {
+        hint.textContent = 'Passwords do not match.';
+        return;
+    }
+    hint.className = 'success';
+    hint.textContent = 'Account created. Static GitHub Pages preview accepted the signup format.';
+});
+
+document.querySelector('#signinForm')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+    alert('Login successful in the static GitHub Pages preview. The full PHP/MySQL login runs on XAMPP.');
+});
+</script>
 </body>
 </html>

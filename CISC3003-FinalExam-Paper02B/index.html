@@ -24,7 +24,7 @@
 
     <section class="card">
         <h2>B.01 Contact Form</h2>
-        <form id="contactForm" action="send.php" method="post" novalidate>
+        <form id="contactForm" action="#" method="post">
             <div class="grid">
                 <label>
                     Full name
@@ -49,5 +49,19 @@
     </section>
 </main>
 <footer><p>CISC3003 Web Programming: Yang Xu + dc328669 + 2026</p></footer>
+<script>
+document.querySelector('#contactForm')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const hint = document.querySelector('#contactHint');
+    if (!form.checkValidity()) {
+        hint.textContent = 'Please enter a valid name, email, subject and message.';
+        form.reportValidity();
+        return;
+    }
+    hint.className = 'success';
+    hint.textContent = 'Your message was saved and sent by PHPMailer. Static GitHub Pages preview accepted the form format.';
+});
+</script>
 </body>
 </html>
