@@ -1,0 +1,91 @@
+<?php
+require_once __DIR__ . '/php/helpers.php';
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scenario A - PHP Form and MySQL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+<main class="container">
+    <section class="hero">
+        <p class="eyebrow">Scenario A</p>
+        <h1>HTML Form, PHP Processing and Prepared SQL Insert</h1>
+        <p>This project demonstrates HTML form best practices, PHP validation, SQL injection prevention and MySQL insertion.</p>
+        <div class="actions">
+            <a href="setup_database.php">Setup Database</a>
+            <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="php_file_list.php">PHP File List</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>A.01-A.04 Student Feedback Form</h2>
+        <form id="scenarioAForm" action="submit_form.php" method="post" novalidate>
+            <div class="grid">
+                <label>
+                    Full name
+                    <input type="text" name="full_name" id="full_name" maxlength="120" required autocomplete="name">
+                </label>
+                <label>
+                    Email address
+                    <input type="email" name="email" id="email" maxlength="160" required autocomplete="email">
+                </label>
+            </div>
+
+            <div class="grid">
+                <label>
+                    Phone number
+                    <input type="text" name="phone" id="phone" maxlength="40" required placeholder="853-12345678">
+                </label>
+                <label>
+                    Course
+                    <select name="course" id="course" required>
+                        <option value="">Choose a course</option>
+                        <option value="CISC3003">CISC3003 Web Programming</option>
+                        <option value="CISC3004">CISC3004 Database Systems</option>
+                        <option value="COMP">Other Computing Course</option>
+                    </select>
+                </label>
+            </div>
+
+            <fieldset>
+                <legend>Study year</legend>
+                <label><input type="radio" name="study_year" value="Year 1" required> Year 1</label>
+                <label><input type="radio" name="study_year" value="Year 2"> Year 2</label>
+                <label><input type="radio" name="study_year" value="Year 3"> Year 3</label>
+                <label><input type="radio" name="study_year" value="Year 4"> Year 4</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interests</legend>
+                <label><input type="checkbox" name="interests[]" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="interests[]" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="interests[]" value="PHP"> PHP</label>
+                <label><input type="checkbox" name="interests[]" value="MySQL"> MySQL</label>
+            </fieldset>
+
+            <label>
+                Message
+                <textarea name="message" id="message" rows="6" minlength="10" required placeholder="Write at least 10 characters."></textarea>
+            </label>
+
+            <label class="terms">
+                <input type="checkbox" name="agree" value="yes" required>
+                I confirm the submitted information is correct.
+            </label>
+
+            <button type="submit">Submit Form Data</button>
+            <p id="formHint" class="hint" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+<?php render_footer(); ?>
+</body>
+</html>
