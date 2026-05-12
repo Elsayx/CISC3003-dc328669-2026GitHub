@@ -1,0 +1,18 @@
+.dashboard .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.dashboard article {
+    border: 1px solid #cfe4df;
+    border-radius: 18px;
+    padding: 20px;
+    background: #f3fbf8;
+}
+
+.dashboard article h2 {
+    margin-bottom: 8px;
+    color: #0f766e;
+}

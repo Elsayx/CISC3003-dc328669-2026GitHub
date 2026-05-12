@@ -1,0 +1,19 @@
+/* Dashboard-specific service cards */
+.dashboard .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.dashboard article {
+    border: 1px solid #d8e2f3;
+    border-radius: 18px;
+    padding: 20px;
+    background: #f8fbff;
+}
+
+.dashboard article h2 {
+    margin-bottom: 8px;
+    color: #2563eb;
+}
