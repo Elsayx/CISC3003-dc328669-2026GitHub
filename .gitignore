@@ -1,0 +1,25 @@
+# IDE / App
+朱砂.app/
+cinnabar/
+cinnabar-vscode/
+fork/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/
+*.csv
+*.xlsx
+*.json
+*.tsv
